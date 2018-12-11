@@ -7,7 +7,7 @@ import com.example.askhat.afinal.localStorage.AppLocalDatabase
 class App : Application() {
     override fun onCreate() {
         super.onCreate()
-        localDB = Room.databaseBuilder(this,AppLocalDatabase::class.java,"appDB").build()
+        localDB = Room.databaseBuilder(this,AppLocalDatabase::class.java,"appDB").allowMainThreadQueries().build()
     }
 
     companion object {

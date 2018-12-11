@@ -1,10 +1,12 @@
 package com.example.askhat.afinal.listUsers
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.util.Log
 import com.example.askhat.afinal.R
+import com.example.askhat.afinal.addUser.AddUserActivity
 import com.example.askhat.afinal.entity.AllDetail
 import com.example.askhat.afinal.entity.ContactGroup
 import com.example.askhat.afinal.entity.User
@@ -32,6 +34,11 @@ class MainActivity : AppCompatActivity(),ListUsersContract.ListUsersView {
         presenter = ListUsersPresenter(this)
         presenter.onStart()
         presenter.getUsers()
+
+        floating.setOnClickListener {
+            val intent = Intent(this, AddUserActivity::class.java)
+            startActivity(intent)
+        }
 
     }
 }

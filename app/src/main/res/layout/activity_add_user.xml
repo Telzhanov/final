@@ -70,8 +70,8 @@
     <android.support.v7.widget.RecyclerView
             app:layout_constraintTop_toBottomOf="@id/mobile"
             android:id="@+id/listGroup"
-            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content">
+            android:layout_width="100dp"
+            android:layout_height="100dp">
 
     </android.support.v7.widget.RecyclerView>
 
